@@ -1,6 +1,6 @@
 using System;
 
-namespace AdventOfCode02_1
+namespace AdventOfCode02_2
 {
     public class Program
     {
