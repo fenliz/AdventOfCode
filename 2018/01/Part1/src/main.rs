@@ -5,11 +5,8 @@ use std::io::BufRead;
 fn main() {
     let mut result: i32 = 0;
     let file = File::open("input.txt").unwrap();
-    for file_line in BufReader::new(file).lines() {
-        match file_line {
-            Ok(string) => result += string.parse::<i32>().unwrap(),
-            _ => ()
-        }
-    }
+    BufReader::new(file).lines().for_each(|file_line|
+        result += file_line.unwrap().parse::<i32>().unwrap()
+    );
     println!("{}", result);
 }
