@@ -35,11 +35,11 @@ fn part2(input: &str) -> usize {
     "abcdefghijklmnopqrstuvwxyz"
         .chars()
         .map(|character| {
-            let reacted = input
+            let string_without_character = input
                 .chars()
                 .filter(|x| character != x.to_ascii_lowercase())
                 .collect::<String>();
 
-            part1(&reacted)
+            part1(&string_without_character)
         }).min().unwrap()
 }
