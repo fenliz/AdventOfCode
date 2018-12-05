@@ -1,7 +1,7 @@
 use std::fs::read_to_string;
 
 fn main() {
-    let mut input = read_to_string("input.txt")
+    let input = read_to_string("input.txt")
         .expect("File not found!");
 
     println!("Part1: {}", part1(&input));
