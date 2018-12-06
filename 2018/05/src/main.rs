@@ -41,5 +41,7 @@ fn part2(input: &str) -> usize {
                 .collect::<String>();
 
             part1(&string_without_character)
-        }).min().unwrap()
+        })
+        .min()
+        .unwrap()
 }
